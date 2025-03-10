@@ -4505,7 +4505,7 @@ html, body {
 		background: none;
 	}
 	#Top_bar.is-sticky .top_bar_right {
-		top: -4px;
+		top: 0px;
 	}
 	#Top_bar.is-sticky .logo {
 		width: auto;
@@ -6551,7 +6551,7 @@ html, body {
 		line-height: 60px!important;
 	}
 	.mobile-sticky #Top_bar.is-sticky a.responsive-menu-toggle {
-		top: 30px!important;
+		top: 15px!important;
 	}
 	.mobile-sticky #Top_bar.is-sticky .top_bar_right {
 		display: none;
