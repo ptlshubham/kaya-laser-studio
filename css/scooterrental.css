@@ -26,7 +26,7 @@ body.header-below:not(.template-slider) #Header {
 	padding-top: 0px;
 }
 #Footer .widgets_wrapper {
-	padding: 70px 0;
+	padding: 10px 0;
 }
 body, button, span.date_label, .timeline_items li h3 span, input[type="submit"], input[type="reset"], input[type="button"], input[type="text"], input[type="password"], input[type="tel"], input[type="email"], textarea, select, .offer_li .title h3 {
 	font-family: "Sora", Helvetica, Arial, sans-serif;
@@ -647,12 +647,12 @@ h6 {
 	background-position-y: -1px;
 }
 @media only screen and ( max-width: 767px) {
-	body:not(.template-slider) #Header {
+	/* body:not(.template-slider) #Header {
 		min-height: ;
 	}
 	#Subheader {
 		padding: ;
-	}
+	} */
 }
 @media only screen and (min-width: 1240px) {
 	body:not(.header-simple) #Top_bar #menu {
