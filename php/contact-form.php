@@ -220,19 +220,11 @@ $mail_body.='<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-mic
 $mail->Body  = $mail_body;
 
 //  $mail->send();
-
-if(!$mail->send()) { 	?>
-<script language="javascript">
-jQuery('#sucessMessage').html('<h2>Something went wrong.</h2>');
-
-</script>
-<?php }else{ ?>
-<script language="javascript">
-jQuery('#sucessMessage').html('<h2>Thank you for filling out your information!</h2>');
-</script>
-<?php
+if (!$mail->send()) {
+    header("Location: https://kaya.keryar.tech/");
+} else {
+    header("Location: https://kaya.keryar.tech/");
 }
-?>
-<script language="javascript">
-window.open("https://kaya.keryar.tech/","_self");
-</script>
+exit();
+
+	
