@@ -23,15 +23,15 @@ $mail->Password   = "Kaya@2210";                           // SMTP password
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
 $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
-$form_name = $_REQUEST['name'];
+$first_name = $_REQUEST['firstname'];
+$last_name = $_REQUEST['lastname'];
 $contact_email = $_REQUEST['email'];
-$contact_address = $_REQUEST['number'];
-$contact_message = $_REQUEST['message'];
 $contact_zipcode = $_REQUEST['zipcode'];
+$contact_phone = $_REQUEST['number'];
 
 //Recipients
 $mail->setFrom('kaya@keryar.com', 'Contact Us');
-$mail->addAddress($contact_email, $form_name); 
+$mail->addAddress($contact_email, $first_name); 
 $mail->addAddress('kaya@keryar.com', 'Contact Us'); 
 
 $servername = "localhost";
@@ -53,8 +53,8 @@ if (!$conn) {
   echo "data successfully recorded";
 }
 
- $sql = "INSERT INTO `kaya` (`name`, `number`, `email`,  `message`, `zipcode`) VALUES
- ('$form_name', '$contact_phone', '$contact_email', '$contact_message', '$contact_zipcode');";
+ $sql = "INSERT INTO `contact` (`firstname`, `lastname`, `email`, `zipcode` ,`number` ) VALUES
+ ('$first_name', '$last_name', '$contact_email','$contact_zipcode', '$contact_phone' );";
  if (mysqli_query($conn, $sql)) {
        echo "New record created successfully";
  } else {
@@ -151,14 +151,14 @@ $mail_body.='<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-mic
 																	 <tr>
 																		<td align="left" class="link-wrap" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 0px; padding: 0; padding-bottom: 20px; word-break: break-word;">
 																		   <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 25px; text-align: left; color: #4F4F4F;">
-																		   Dear <b>'.$form_name.'</b><br>
+																		   Dear <b>'.$first_name.'</b><br>
 																			  <br> Thank you for reaching out to us! We have received your message and will respond as soon as possible.<br><br>
 																			  <ul>
-																				 <li><strong>Name</strong> - '.$form_name.'</li>
-																				 <li><strong>Email</strong> -'. $contact_email.'</li>
+																				 <li><strong>First Name</strong> - '.$first_name.'</li>
+																				 <li><strong>Last Name</strong> -'. $last_name.'</li>
+																				 <li><strong>Email</strong> - '.$contact_email.'</li>
 																				 <li><strong>Phone Number</strong> - '.$contact_phone.'</li>
-																				 <li><strong>Address</strong> - '.$contact_address.'</li>
-																				 <li><strong>Message</strong> -'. $contact_message.'</li>
+																				 <li><strong>Zip Code</strong> -'. $contact_zipcode.'</li>
 																			  </ul>
 																			  <br>
 																		   </div>
