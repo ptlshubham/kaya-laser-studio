@@ -113,37 +113,32 @@
 														<div class="column one-second">
 															<input placeholder="Your name" type="text" name="name"
 																id="name" size="40" aria-required="true"
-																aria-invalid="false" oninput="validateName()" />
-															<span id="nameError" class="error-message"></span>
+																aria-invalid="false" />
 														</div>
 														<!-- One Second (1/2) Column -->
 														<div class="column one-second">
 															<input placeholder="Your e-mail" type="email" name="email"
 																id="email" size="40" aria-required="true"
-																aria-invalid="false" oninput="validateEmail()" />
-															<span id="emailError" class="error-message"></span>
+																aria-invalid="false" />
 														</div>
 														<div class="column one">
 															<input placeholder="Contact" type="text" name="Contact"
 																id="number" size="40" aria-invalid="true"
-																style="margin-bottom: 15px;"
-																oninput="validateContact()" />
-															<span id="contactError" class="error-message"></span>
+																style="margin-bottom: 15px;" />
 														</div>
 														<div class="column one">
 															<textarea placeholder="Message" name="body" id="message"
-																style="width:100%;" rows="10"
+																style="width:100%; " rows="10"
 																aria-invalid="false"></textarea>
 														</div>
 
 														<div class="column one">
 															<input type="button" value="Send A Message" id="submit"
 																style="margin-top: 15px;"
-																onClick="return checkValues();">
+																onClick="return check_values();">
 														</div>
 													</form>
 												</div>
-
 											</div>
 										</div>
 									</div>
@@ -323,83 +318,7 @@
 			color: black;
 			border: 1px black;
 		}
-
-		.error-message {
-			color: red;
-			font-size: 14px;
-		}
-
-		.valid {
-			border: 2px solid black;
-			color: black;
-		}
-
-		.invalid {
-			border: 2px solid red;
-			color: red;
-		}
 	</style>
-	<script> function validateName() {
-			let name = document.getElementById("name");
-			let nameError = document.getElementById("nameError");
-			if (name.value.trim().length < 3) {
-				name.classList.add("invalid");
-				name.classList.remove("valid");
-				nameError.innerText = "Name must be at least 3 characters!";
-			} else {
-				name.classList.add("valid");
-				name.classList.remove("invalid");
-				nameError.innerText = "";
-			}
-		}
-
-		function validateEmail() {
-			let email = document.getElementById("email");
-			let emailError = document.getElementById("emailError");
-			let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-			if (!regex.test(email.value)) {
-				email.classList.add("invalid");
-				email.classList.remove("valid");
-				emailError.innerText = "Enter a valid email!";
-			} else {
-				email.classList.add("valid");
-				email.classList.remove("invalid");
-				emailError.innerText = "";
-			}
-		}
-
-		function validateContact() {
-			let contact = document.getElementById("Contact");
-			let contactError = document.getElementById("contactError");
-			let regex = /^[0-9]{10}$/;
-			if (!regex.test(contact.value)) {
-				contact.classList.add("invalid");
-				contact.classList.remove("valid");
-				contactError.innerText = "Enter a valid 10-digit contact number!";
-			} else {
-				contact.classList.add("valid");
-				contact.classList.remove("invalid");
-				contactError.innerText = "";
-			}
-		}
-
-		function checkValues() {
-			validateName();
-			validateEmail();
-			validateContact();
-
-			let name = document.getElementById("name").classList.contains("valid");
-			let email = document.getElementById("email").classList.contains("valid");
-			let contact = document.getElementById("Contact").classList.contains("valid");
-
-			if (name && email && contact) {
-				alert("Form submitted successfully!");
-				return true;
-			} else {
-				alert("Please fix the errors before submitting.");
-				return false;
-			}
-		}</script>
 	<div id="Side_slide" class="right dark" data-width="250">
 		<div class="close-wrapper"> <a href="#" class="close"><i class="icon-cancel-fine"></i></a> </div>
 		<div class="menu_wrapper"></div>
