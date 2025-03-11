@@ -40,9 +40,9 @@ $mail->addAddress('kaya@keryar.com', 'Contact Us');
 // $database = "kaya";
 
  $servername = "127.0.0.1:3306";
- $username = "u768511311_kaya	";
+ $username = "u768511311_kaya";
  $password = "Kaya@2210";
- $database = "u768511311_kaya	";
+ $database = "u768511311_kaya";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
