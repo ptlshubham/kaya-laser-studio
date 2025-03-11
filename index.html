@@ -957,23 +957,24 @@
 						<hr>
 
 						<!-- Form -->
-						<form id="contactform" class="contact-form">
+						<form id="contactform" class="contact-form" action="php/contact-form.php" method="POST">
 							<div class="row">
 								<!-- First Name & Last Name -->
 								<div class="col-6">
 									<div class="mb-3">
-										<label for="first_name" class="form-label"><strong>First
+										<label for="firstname" class="form-label"><strong>First
 												Name*</strong></label>
-										<input type="text" class="form-control" name="first_name" id="first_name"
-											placeholder="Enter your first name" required>
+										<input type="text" style="border-radius: 50px;" class="form-control"
+											name="firstname" id="firstname" placeholder="Enter your first name"
+											required>
 									</div>
 								</div>
 								<div class="col-6">
 									<div class="mb-3">
-										<label for="last_name" class="form-label"><strong>Last
+										<label for="lastname" class="form-label"><strong>Last
 												Name*</strong></label>
-										<input type="text" class="form-control" name="last_name" id="last_name"
-											placeholder="Enter your last name" required>
+										<input type="text" style="border-radius: 50px;" class="form-control"
+											name="lastname" id="lastname" placeholder="Enter your last name" required>
 									</div>
 								</div>
 							</div>
@@ -983,16 +984,16 @@
 								<div class="col-md-6">
 									<div class="mb-3">
 										<label for="email" class="form-label"><strong>Email*</strong></label>
-										<input type="email" class="form-control" name="email" id="email"
-											placeholder="Enter your email" required>
+										<input type="email" style="border-radius: 50px;" class="form-control"
+											name="email" id="email" placeholder="Enter your email" required>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="mb-3">
-										<label for="zip_code" class="form-label"><strong>ZIP
+										<label for="zipcode" class="form-label"><strong>ZIP
 												Code*</strong></label>
-										<input type="text" class="form-control" name="zip_code" id="zip_code"
-											placeholder="Enter your ZIP code" required>
+										<input type="text" style="border-radius: 50px;" class="form-control"
+											name="zipcode" id="zipcode" placeholder="Enter your ZIP code" required>
 									</div>
 								</div>
 							</div>
@@ -1001,9 +1002,9 @@
 							<div class="row">
 								<div class="col-12">
 									<div class="mb-3">
-										<label for="phone" class="form-label"><strong>Phone*</strong></label>
-										<input type="tel" class="form-control" name="phone" id="phone"
-											placeholder="Enter your phone number" required>
+										<label for="number" class="form-label"><strong>Phone*</strong></label>
+										<input type="tel" style="border-radius: 50px;" class="form-control"
+											name="number" id="number" placeholder="Enter your phone number" required>
 									</div>
 								</div>
 							</div>

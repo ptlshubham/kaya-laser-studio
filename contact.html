@@ -108,34 +108,49 @@
 												style="background-color:#fff;padding:40px 10% 25px;border-radius: 20px; box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.1);">
 												<h3>SEND US A MESSAGE</h3>
 												<div id="contactWrapper">
-													<form id="contactform" action="php/contactform.php" method="POST">
+													<form id="contactform" action="php/contact-form.php" method="POST">
 														<!-- One Second (1/2) Column -->
 														<div class="column one-second">
-															<input placeholder="Your name" type="text" name="name"
-																id="name" size="40" aria-required="true"
+															<label for="firstname" class="form-label">First Name</label>
+															<input placeholder="Your First Name"
+																style="border-radius: 50px;" type="text"
+																name="firstname" id="firstname" size="40"
+																aria-required="true" aria-invalid="false" />
+														</div>
+														<div class="column one-second">
+															<label for="lastname" class="form-label">Last Name</label>
+															<input placeholder="Your Last Name"
+																style="border-radius: 50px;" type="text" name="lastname"
+																id="lastname" size="40" aria-required="true"
 																aria-invalid="false" />
 														</div>
 														<!-- One Second (1/2) Column -->
 														<div class="column one-second">
-															<input placeholder="Your e-mail" type="email" name="email"
+															<label for="email" class="form-label">Email</label>
+															<input placeholder="Your e-mail"
+																style="border-radius: 50px;" type="email" name="email"
 																id="email" size="40" aria-required="true"
 																aria-invalid="false" />
 														</div>
-														<div class="column one">
-															<input placeholder="Contact" type="text" name="Contact"
-																id="number" size="40" aria-invalid="true"
-																style="margin-bottom: 15px;" />
+														<div class="column one-second">
+															<label for="number" class="form-label">Contact
+																Number</label>
+															<input placeholder="Your Contact Number"
+																style="border-radius: 50px;" type="number" name="number"
+																id="number" size="40" aria-required="true"
+																aria-invalid="false" />
 														</div>
 														<div class="column one">
-															<textarea placeholder="Message" name="body" id="message"
-																style="width:100%; " rows="10"
-																aria-invalid="false"></textarea>
+															<label for="zipcode" class="form-label">Zipcode</label>
+															<input placeholder="Your Zipcode"
+																style="border-radius: 50px;" type="text" name="zipcode"
+																id="zipcode" size="40" aria-invalid="true"
+																style="margin-bottom: 15px;" />
 														</div>
 
 														<div class="column one">
-															<input type="button" value="Send A Message" id="submit"
-																style="margin-top: 15px;"
-																onClick="return check_values();">
+															<input type="submit" value="Send A Message" id="submit"
+																style="margin-top: 15px;">
 														</div>
 													</form>
 												</div>
@@ -318,6 +333,17 @@
 			color: black;
 			border: 1px black;
 		}
+
+		.form-label {
+			display: block;
+			/* Ensures labels are on top of input */
+			text-align: left;
+			/* Aligns text to the left */
+			font-weight: bold;
+			/* Optional: Makes label text bold */
+			margin-bottom: 5px;
+			/* Adds space between label and input */
+		}
 	</style>
 	<div id="Side_slide" class="right dark" data-width="250">
 		<div class="close-wrapper"> <a href="#" class="close"><i class="icon-cancel-fine"></i></a> </div>
@@ -336,7 +362,7 @@
 	<script src="js/animations/animations.js"></script>
 	<script src="js/translate3d.js"></script>
 	<script src="js/scripts.js"></script>
-	<script src="js/email.js"></script>
+	<!-- <script src="js/email.js"></script> -->
 </body>
 
 </html>
