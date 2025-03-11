@@ -34,15 +34,15 @@ $mail->setFrom('kaya@keryar.com', 'Contact Us');
 $mail->addAddress($contact_email, $first_name); 
 $mail->addAddress('kaya@keryar.com', 'Contact Us'); 
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "kaya";
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $database = "kaya";
 
-//  $servername = "127.0.0.1:3306";
-//  $username = "u768511311_arisesolarllc";
-//  $password = "Rumit@2210";
-//  $database = "u768511311_arise";
+ $servername = "127.0.0.1:3306";
+ $username = "u768511311_kaya	";
+ $password = "Kaya@2210";
+ $database = "u768511311_kaya	";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $database);
