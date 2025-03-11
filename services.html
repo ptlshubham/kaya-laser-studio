@@ -14,6 +14,7 @@
     <!-- Favicons -->
     <link rel="shortcut icon" href="images/favicon.ico">
     <!-- FONTS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel='stylesheet'
         href='http://fonts.googleapis.com/css?family=Sora:100,200,300,400,400italic,500,600,700,700italic,900'>
     <link rel='stylesheet'
@@ -418,18 +419,18 @@
                                         <div class="column mcb-column one-second column_column">
                                             <div class="column_attr clearfix mobile_align_center"
                                                 style="padding:10px 0 0;">
-                                                <h3 style="color:#FFF;">
+                                                <h4 style="color:#FFF;">
                                                     <i class="icon-mobile" style="color:#fff"></i>
                                                     <a href="tel:+16148120515"
                                                         style="color:#FFF; text-decoration: none;">+1 614-812-0515</a>
-                                                </h3>
-                                                <h3 style="color:#FFF;">
+                                                </h4>
+                                                <h4 style="color:#FFF;">
                                                     <i class="icon-mail" style="color:#fff; margin-right: 8px;"></i>
                                                     <a href="mailto:info@kayalaserstudio.com"
                                                         style="color:#FFF; text-decoration: none;">
                                                         info@kayalaserstudio.com
                                                     </a>
-                                                </h3>
+                                                </h4>
 
                                                 <hr class="no_line" style="margin:0 auto 40px">
                                                 <h5 style="color:#FFF;">We're here to help! Get in touch for inquiries
@@ -453,6 +454,58 @@
                 </div>
             </div>
         </div>
+        <div class="njs-sticky-side body-append image_button_cover placement-right now-show">
+            <a href="#" target="blank_" rel="noopener noreferrer">Call Us: 614-812-0515</a>
+        </div>
+        <style>
+            html .njs-sticky-side.image_button_cover.placement-right {
+                right: 0;
+            }
+
+            html .njs-sticky-side.image_button_cover {
+                position: fixed;
+                top: 50%;
+                box-shadow: none;
+                z-index: 99999;
+                transition: transform .3s cubic-bezier(0, 0, 0, 1);
+                -webkit-transition: -webkit-transform .3s cubic-bezier(0, 0, 0, 1);
+            }
+
+            html .njs-sticky-side.image_button_cover.placement-right.now-show a {
+                transform: translate3d(4px, 0, 0) rotate(-90deg);
+                -webkit-transform: translate3d(4px, 0, 0) rotate(-90deg);
+            }
+
+            html .njs-sticky-side.image_button_cover.placement-right a {
+                border-radius: 3px 3px 0 0;
+                transform: translate3d(200%, 0, 0) rotate(-90deg);
+                -webkit-transform: translate3d(200%, 0, 0) rotate(-90deg);
+                transform-origin: 100% 100%;
+                -webkit-transform-origin: 100% 100%;
+            }
+
+            html .njs-sticky-side.image_button_cover a {
+                padding: 10px 15px 12px 15px;
+                font-size: 18px;
+                font-weight: 400;
+                border-radius: 50px;
+                display: inline-block;
+                position: relative;
+                transition: transform .3s;
+                -webkit-transition: -webkit-transform .3s;
+                background-color: rgb(32, 105, 76);
+                color: white;
+                font-weight: 100;
+                top: -206.5px;
+                font-family: 'Poppins-bold';
+            }
+
+            html .njs-sticky-side.image_button_cover a:hover {
+                background-color: white;
+                color: black;
+                border: 1px black;
+            }
+        </style>
         <footer id="Footer" class="clearfix">
             <div class="widgets_wrapper">
                 <div class="container">
@@ -534,20 +587,27 @@
             </div>
         </div>
     </div>
+    <div id="Side_slide" class="right dark" data-width="250">
+        <div class="close-wrapper"> <a href="#" class="close"><i class="icon-cancel-fine"></i></a> </div>
+        <div class="menu_wrapper"></div>
+        <div class="extras"> <a href="https://1.envato.market/9ZxXY" class="action_button" target="_blank">BUY NOW</a>
+            <div class="extras-wrapper"></div>
+        </div>
+    </div>
     <div id="body_overlay"></div>
 
 
 
     <!-- JS -->
-    <script src="../../js/jquery-3.6.0.min.js"></script>
-    <script src="../../js/jquery-migrate-3.4.0.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-migrate-3.4.0.min.js"></script>
 
-    <script src="../../js/mfn.menu.js"></script>
-    <script src="../../js/jquery.plugins.js"></script>
-    <script src="../../js/jquery.jplayer.min.js"></script>
-    <script src="../../js/animations/animations.js"></script>
-    <script src="../../js/translate3d.js"></script>
-    <script src="../../js/scripts.js"></script>
+    <script src="js/mfn.menu.js"></script>
+    <script src="js/jquery.plugins.js"></script>
+    <script src="js/jquery.jplayer.min.js"></script>
+    <script src="js/animations/animations.js"></script>
+    <script src="js/translate3d.js"></script>
+    <script src="js/scripts.js"></script>
 
 
 </body>
