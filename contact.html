@@ -54,7 +54,7 @@
 											<li> <a href="about.html"><span>About us</span></a> </li>
 											<li> <a href="services.html"><span>Service</span></a> </li>
 											<li> <a href="how-it-works.html"><span>How it
-												works?</span></a> </li>
+														works?</span></a> </li>
 											<li class="current-menu-item"> <a
 													href="contact.html"><span>Contact</span></a> </li>
 										</ul>
@@ -113,48 +113,48 @@
 													<form id="contactform" action="php/contact-form.php" method="POST">
 														<!-- One Second (1/2) Column -->
 														<div class="column one-second">
-															<label for="firstname" class="form-label">First Name</label>
+															<label for="firstname" class="form-label">First Name <span
+																	style="color: red;">*</span></label>
 															<input placeholder="Your First Name"
 																style="border-radius: 50px;" type="text"
-																name="firstname" id="firstname" size="40"
-																aria-required="true" aria-invalid="false" />
+																name="firstname" id="firstname" size="40" required />
 														</div>
 														<div class="column one-second">
-															<label for="lastname" class="form-label">Last Name</label>
+															<label for="lastname" class="form-label">Last Name <span
+																	style="color: red;">*</span></label>
 															<input placeholder="Your Last Name"
 																style="border-radius: 50px;" type="text" name="lastname"
-																id="lastname" size="40" aria-required="true"
-																aria-invalid="false" />
+																id="lastname" size="40" required />
 														</div>
 														<!-- One Second (1/2) Column -->
 														<div class="column one-second">
-															<label for="email" class="form-label">Email</label>
+															<label for="email" class="form-label">Email <span
+																	style="color: red;">*</span></label>
 															<input placeholder="Your e-mail"
 																style="border-radius: 50px;" type="email" name="email"
-																id="email" size="40" aria-required="true"
-																aria-invalid="false" />
+																id="email" size="40" required />
 														</div>
 														<div class="column one-second">
-															<label for="number" class="form-label">Contact
-																Number</label>
+															<label for="number" class="form-label">Contact Number <span
+																	style="color: red;">*</span></label>
 															<input placeholder="Your Contact Number"
 																style="border-radius: 50px;" type="number" name="number"
-																id="number" size="40" aria-required="true"
-																aria-invalid="false" />
+																id="number" size="40" required />
 														</div>
 														<div class="column one">
-															<label for="zipcode" class="form-label">Zipcode</label>
+															<label for="zipcode" class="form-label">Zipcode <span
+																	style="color: red;">*</span></label>
 															<input placeholder="Your Zipcode"
-																style="border-radius: 50px;" type="text" name="zipcode"
-																id="zipcode" size="40" aria-invalid="true"
-																style="margin-bottom: 15px;" />
+																style="border-radius: 50px; margin-bottom: 15px;"
+																type="text" name="zipcode" id="zipcode" size="40"
+																required />
 														</div>
-
 														<div class="column one">
 															<input type="submit" value="Send A Message" id="submit"
 																style="margin-top: 15px;">
 														</div>
 													</form>
+
 												</div>
 											</div>
 										</div>
@@ -226,7 +226,7 @@
 									<p><a href="about.html">About Us</a></p>
 									<p><a href="services.html">Services</a></p>
 									<p><a href="how-it-works.html">How it
-										works?</a></p>
+											works?</a></p>
 									<p><a href="contact.html">Contact Us</a></p>
 									<p><a href="enquiry.html">Enquiry</a></p>
 
@@ -286,7 +286,7 @@
 		</footer>
 	</div>
 	<div class="njs-sticky-side body-append image_button_cover placement-right now-show">
-		<a href="#" target="blank_" rel="noopener noreferrer">Call Us: 614-812-0515</a>
+		<a href="tel:6148120515" rel="noopener noreferrer">Call Us: 614-812-0515</a>
 	</div>
 	<style>
 		html .njs-sticky-side.image_button_cover.placement-right {
